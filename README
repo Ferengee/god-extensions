@@ -1,0 +1,11 @@
+Written in ruby, god process monitoring is extendable.
+I've tried to intergrate god with collectd and other external services.
+These extensions can be included from any god config.
+They enhance the default 0.11.0 version.
+This is work in (slow) progress.
+
+These extensions also contain two patches.
+- driver_clear_events_patch.rb makes sure lifecycle events dont get erased
+  in a state change
+- cpu_usage_patch.rb alters the SlashProcPoller to average the cpu usage
+  over the polling interval, instead of over the process lifetime
